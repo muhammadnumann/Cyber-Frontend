@@ -1,0 +1,57 @@
+--- 
+default: 
+  image: "docker:19.03.13"
+  services: 
+    - "docker:19.03.13-dind"
+variables: 
+  AWS_REGION: us-east-1
+  SERVICE: frontend
+  IMAGE_TAG: 640488719162.dkr.ecr.us-east-1.amazonaws.com/cyber/frontend:$SERVICE-$CI_PIPELINE_IID
+  DOCKER_DRIVER: overlay2
+  DOCKER_TLS_CERTDIR: ""
+  DOCKER_HOST: tcp://localhost:2375
+stages: 
+  - build
+  - trigger
+build_job:
+  stage: build
+  variables:
+    ENVIRONMENT: $ENVIRONMENT
+    VERSION: $VERSION
+  before_script:
+    - apk add --update --no-cache curl jq
+    - apk add --no-cache python3 py3-pip
+    - pip3 install --no-cache-dir awscli
+    - rm -rf .env
+  script:
+    - apk add gettext
+    - export DOCKER_BUILDKIT=1
+    - echo "Wait for Docker daemon at tcp://localhost:2375"
+    - while ! nc -z localhost 2375; do sleep 0.1; done
+    - |
+      export REACT_APP_BASE_URL=https://dev.soc.shieldriser.com/
+      touch .env
+      echo "REACT_APP_BASE_URL=$(echo $REACT_APP_BASE_URL)" >> .env
+    - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 640488719162.dkr.ecr.us-east-1.amazonaws.com
+    - docker build -t $IMAGE_TAG .
+    - docker images
+    - docker push $IMAGE_TAG
+    - |
+      curl --request PUT "https://gitlab.nioyatech.com/api/v4/groups/485/variables/KUBE_FRONTEND_IMAGE" \
+      --header "PRIVATE-TOKEN: $API_TOKEN" \
+      --form "value=$IMAGE_TAG"
+
+
+  only:
+    - dev
+  tags:
+    - kube-runner
+
+
+trigger:
+  stage: trigger
+  trigger:
+    project: cyber-workspace/devops
+  only:
+    - dev
+

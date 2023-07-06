@@ -1,0 +1,62 @@
+.tag-container {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #dedede;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag-container.dark {
+  background-color: #222;
+}
+
+.tag-item {
+  border: 1px solid #AAA;
+  padding: 2px 5px;
+  margin-right: 0.5rem;
+  border-radius: 5px;
+  color: #000;
+  background-color: #EDEDED;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+
+.tag-item.dark {
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: #666;
+}
+
+.tag-remove {
+  height: 20px;
+}
+
+.tag-remove:hover svg path {
+  stroke: #F00;
+}
+
+.tag-input {
+  border: 1px solid #ededed;
+  padding: 5px;
+  color: #000;
+  flex-grow: 1;
+}
+
+.tag-input.dark {
+  color: #fff;
+  background-color: #666;
+}
+
+.playbook-label {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #1C1C1E;
+}
+
+.playbook-input div {
+  border-radius: 8px;
+}

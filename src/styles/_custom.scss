@@ -1,0 +1,284 @@
+@import 'theme_colors';
+
+// a {
+//   color:$link-color;
+//   :hover {
+//     color:$link-hover-color;
+//   }
+// }
+
+.no-shadow {
+  box-shadow: none;
+}
+
+.shadow {
+  box-shadow: 0.7rem rgba(0, 0, 0, 0.1);
+}
+
+.shadow-all {
+  box-shadow: 0px 0px 20px rgba(132, 132, 132, 0.2);
+}
+
+.shadow:hover {
+  box-shadow: 0.7rem rgba(0, 0, 0, 0.2);
+}
+
+.bordered {
+  border: 1px solid #DEDEDE;
+}
+
+.bordered-5 {
+  border: 1px solid #DEDEDE;
+  border-radius: 5px;
+}
+
+.bordered-10 {
+  border: 1px solid #DEDEDE;
+  border-radius: 10px;
+}
+
+.bordered-15 {
+  border: 1px solid #DEDEDE;
+  border-radius: 15px;
+}
+
+.rounded-5 {
+  border-radius: 5px;
+}
+
+.rounded-10 {
+  border-radius: 10px;
+}
+
+.rounded-15 {
+  border-radius: 15px;
+}
+
+.rounded-20 {
+  border-radius: 20px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* Header için stiller */
+a.Header {
+  text-decoration: none;
+  color: #000;
+}
+
+a.Header-light {
+  text-decoration: none;
+  color: #fff;
+}
+
+.button-light {
+  background-color: #fff;
+  color: #000;
+  // border-color: #000;
+  border: 1px solid #000;
+  border-radius: 5px;
+  height: 50px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.button-light:hover {
+  background-color: #4daaca;
+  color: #FFF;
+}
+
+.button-dark {
+  background-color: #000;
+  color: #fff;
+  // border-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  height: 50px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.button-dark:hover {
+  background-color: #4daaca;
+}
+
+.button-border-black {
+  border: 1px solid black;
+}
+
+.button-border-white {
+  border: 1px solid white;
+}
+
+.button-splunk {
+  background-color: #8C7548;
+}
+
+table,
+th,
+td {
+  border-collapse: collapse;
+}
+
+td {
+  padding: 5px;
+  padding-left: 10px;
+}
+
+.custom-card {
+  width: 100%;
+  border-radius: 15px;
+  border: 1px solid #DEDEDE;
+  padding: 16px;
+  height: 100%;
+}
+
+.black-button {
+  color: #fff;
+  background-color: #000;
+}
+
+.main-heading {
+  font-weight: 500 !important;
+  font-size: 24px !important;
+  line-height: 30px !important;
+  color: #1C1C1E;
+}
+
+.MuiTab-root {
+  text-transform: capitalize !important;
+}
+
+.MuiTab-root.Mui-selected {
+  color: #8C7548 !important;
+}
+
+.MuiTabs-indicator {
+  height: 1px !important;
+  background-color: #8C7548 !important;
+}
+
+.cancel-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 16px;
+
+  width: 87px;
+  height: 36px;
+  color: #fff !important;
+  background: #EB5757 !important;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.primary-btn {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #FFFFFF !important;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 16px;
+  background: #2196F3 !important;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.cutom-table-width {
+  min-width: 870px;
+  overflow-x: auto;
+  margin-top: 16px;
+  margin-bottom: 20px
+}
+
+.editable-textfeild {
+  input {
+    height: 0px;
+  }
+}
+
+.user-autocomplete {
+  input {
+    height: 0;
+  }
+}
+
+.custom-modal-heading {
+  font-weight: 500 !important;
+  font-size: 30px !important;
+  line-height: 38px !important;
+  color: #1C1C1E !important;
+}
+
+.modal-subtitle {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #8E8E93;
+  margin-right: 6px;
+}
+
+.modal-subtitle-detail {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #1C1C1E;
+
+}
+
+.modal-desc {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #1C1C1E;
+}
+
+.search-bar {
+  height: 40px !important;
+  width: 50% !important;
+
+  input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 24px 8px 9px;
+    gap: 8px;
+    border-radius: 8px;
+  }
+}
+
+.text-red-color {
+  color: #FA4D56;
+}
+
+.text-green {
+  color: #219653;
+}
+
+// font-weight: 500;
+// font-size: 14px;
+// line-height: 20px;
+// /* identical to box height, or 143% */
+
+
+// /* Dark Grey */
+
+// color: #1C1C1E;
+
+.user-profile-active {
+  background-color: #F0F5FF;
+  color: #2F6FED;
+  border-radius: 5px;
+  font-size: 1em;
+  font-weight: 600;
+}

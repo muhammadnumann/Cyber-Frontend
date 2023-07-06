@@ -1,0 +1,30 @@
+{
+  "sub": "metin@nioyatech.com",
+  "sub_status": "active",
+  "sub_default_membership_type_id": 35,
+  "sub_id": 150,
+  "sub_default_subscription_id": "eb754b27-10f5-438e-864e-3089e32ea423",
+  "sub_app": 9,
+  "iss": "https://a3m-staging.clarusway.com",
+  "sub_default_org_id": 1679576004519525,
+  "nonce": "19xC7RFi1qL31NLMY0-EWX4_-iPf7p3Z6BHK5WKBeuY",
+  "sub_permissions": ["ROLE_Users", "file:read", "file:write", "user:read"],
+  "sub_user_groups": [],
+  "access_token": "eyJraWQiOiJlM2E0ODk2OC03OGI1LTQ1ZmUtYjE5ZC05NmJmNjlkYTFhMjIiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJtZXRpbkBuaW95YXRlY2guY29tIiwic3ViX2RlZmF1bHRfbWVtYmVyc2hpcF90eXBlX2lkIjozNSwic3ViX2lkIjoxNTAsInN1Yl9kZWZhdWx0X3N1YnNjcmlwdGlvbl9pZCI6ImViNzU0YjI3LTEwZjUtNDM4ZS04NjRlLTMwODllMzJlYTQyMyIsInN1Yl9hcHAiOjksImlzcyI6Imh0dHBzOlwvXC9hM20tc3RhZ2luZy5jbGFydXN3YXkuY29tIiwic3ViX2RlZmF1bHRfb3JnX2lkIjoxNjc5NTc2MDA0NTE5NTI1LCJhdWQiOiIxNjc5MzkyMzEwX3dVT2lxVlZrT2FuM09aVyIsIm5iZiI6MTY4NDk0MjgzOCwic3ViX2RlZmF1bHRfb3JnX25hbWUiOiJDeWJlciBMTEMiLCJzY29wZSI6WyJST0xFX1VzZXJzIiwiZmlsZTpyZWFkIiwiZmlsZTp3cml0ZSIsInVzZXI6cmVhZCJdLCJzdWJfZGVmYXVsdF9yb2xlX2lkIjoxODcsImV4cCI6MTY4NDk0NDYzOCwiaWF0IjoxNjg0OTQyODM4fQ.Rhu4wLa2POqpIfHHB--Z7G0Ka8ckcDTOrqZ1DTgInMjmqWjBVpY5cmMaINdKk5ULb4Vy_eh49xiwOBmAYSOjTsis5ic1CKQUG1F85BjrAxCs25XNzSGS9uLsMu9AdPKLIIiegW4zXdETGLKaDSZvRwsHwE4bktpCIhZvgFna8IbH4di4uL_9h-n5OIvIjGSiUa9a6R_k9cSHzEUOn1KDBSSrdv9YKfgvm5JHJHA3yfHAvn26Vqa5IfsBK5741SSPA4xCnMSvSQTU7Of9L8vMNve-hthmalR2iqDuzKGfNcRwk7jNiObMFwfrQ8tv1mtHhZlzZLsb5AT-G7cYIv0eLA",
+  "aud": ["1679392310_wUOiqVVkOan3OZW"],
+  "sub_default_org_name": "Cyber LLC",
+  "azp": "1679392310_wUOiqVVkOan3OZW",
+  "sub_default_role_id": 187,
+  "exp": "2023-05-24T15:45:38Z",
+  "iat": "2023-05-24T15:40:38Z",
+  "sub_roles": [
+    {
+      "subscription_id": "eb754b27-10f5-438e-864e-3089e32ea423",
+      "role_id": 187,
+      "organization_id": 1679576004519525,
+      "name": "Users",
+      "organization_name": "Cyber LLC",
+      "is_default": true
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+@use "sass:math";
+@import 'theme_colors';
+
+$header-min-height: 60px;
+$sidebar-full-width: 17rem;
+$sidebar-minimize-width: 4.3rem;
+$sidebar-minimize-width-icon: 3.5rem;
+$main-content-padding: 2rem;
+// $sidebar-icon-size: 1.5rem;
+// $user-box-size: 2.4rem;
+
+.main-content {
+  position: absolute;
+  left: $sidebar-full-width;
+  top: $header-min-height;
+  // width: calc(100% - ($sidebar-full-width + ($main-content-padding * 4) + 0.5rem));
+  width: calc(100% - 17rem);
+  height: calc(100% - ($header-min-height + ($main-content-padding)));
+  padding: $main-content-padding;
+
+  transition: 0.5s;
+  z-index: -1000;
+}
+
+.main-content.minimize {
+  left: $sidebar-minimize-width !important;
+  // width: calc(100% - ($sidebar-minimize-width + ($main-content-padding * 4) + 0.5rem)) !important;
+  width: calc(100% - 5rem) !important;
+}
+
+.sidenav {
+  height: 100%;
+  width: $sidebar-full-width;
+  position: fixed;
+  top: $header-min-height;
+  left: 0;
+  overflow-x: auto;
+  transition: 0.5s;
+  // padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-right: 1px solid $border-color;
+  z-index: 1000;
+
+  li {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 1.1em;
+    // color: $link-color;
+    display: block;
+    transition: 0.3s;
+    border: none;
+
+    :hover {
+      color: $link-hover-color;
+    }
+  }
+
+  .SidebarSubLinkList {
+    margin-left: .5rem;
+
+    .sublink {
+      font-size: 0.8em;
+    }
+  }
+
+  .SidebarSubLinkList2 {
+    margin-left: .5rem;
+
+    .sublink2 {
+      font-size: 0.8em;
+    }
+  }
+
+  .btnCollapse {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: ($sidebar-full-width - 1rem);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    cursor: pointer;
+    // border-top: 1px solid $border-color;
+    // border-right: 1px solid $border-color;
+  }
+
+  a {
+    text-decoration: none !important;
+    // color: $link-color !important;
+    display: flex;
+    align-items: center;
+    // transition: 0.3s !important;
+    color: $nav-text-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  svg {
+    margin-right: 8px;
+  }
+}
+
+.sidenav.minimize {
+  width: $sidebar-minimize-width !important;
+
+  .btnCollapse {
+    width: $sidebar-minimize-width-icon !important;
+  }
+}
+
+.sidenav.dark {
+  color: #fff;
+}
+
+div[id^='tippy-'] {
+  // background-color: white;
+  left: ($sidebar-minimize-width - 3.5rem) !important;
+
+  ul {
+    // border-left: 0.2rem solid $main-color !important;
+
+    li {
+      border: none !important;
+      border-left: 0.2rem solid $main-color !important;
+      font-size: 1em;
+      background-color: white !important;
+      cursor: context-menu;
+
+      :hover :active {
+        background: $main-color !important;
+        border-left: 0.2rem solid $main-color !important;
+        border-radius: 0px !important;
+        color: $main-color !important;
+        filter: invert(55%) sepia(6%) saturate(3888%) hue-rotate(104deg) brightness(72%) contrast(76%) !important;
+      }
+    }
+  }
+}
+
+
+.SidebarLinkList {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sidenav li:hover {
+  background: $nav-bg-color;
+  border-radius: 4px;
+
+  a {
+    color: $main-color;
+  }
+
+  svg {
+    path {
+      stroke: $main-color !important;
+    }
+  }
+}
+
+.sidenav li.active {
+  background: $nav-bg-color;
+  border-right: 4px solid $main-color;
+  border-radius: 4px;
+
+  a {
+    color: $main-color;
+  }
+
+  svg {
+    path {
+      stroke: $main-color !important;
+    }
+  }
+}
+
+.sidenav.minimize li {
+  border-right: 0px;
+  height: 35px;
+  width: 48px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+
+  a svg {
+    margin: 0;
+  }
+}
+
+.sidenavPopUp {
+  border: 0;
+  // box-shadow: 0px 0px 20px $link-color;
+  border-radius: 4px;
+
+  svg {
+    margin-right: 10px;
+  }
+
+  color:black;
+
+}
